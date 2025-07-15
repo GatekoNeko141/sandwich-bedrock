@@ -42,7 +42,7 @@
 
 .infoMain{
   width: 100%;
-  min-height: 100mvh;
+  min-height: 100vh;
   .pProfile{
     width: 200px;
     height: 200px;
@@ -50,5 +50,18 @@
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0px 0px 15px 4px rgb(0 0 0 / 53%);
+  }
+}
+.cardContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  @media (width < 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (width < 768px) {
+    grid-template-columns: 1fr;
   }
 }
