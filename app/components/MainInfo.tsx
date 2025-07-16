@@ -5,6 +5,7 @@ import Image from "next/image";
 import st from './MainInfo.module.scss';
 
 const MainInfo = () => {
+  console.log("===ENV===", process.env.NEXT_PUBLIC_API_BASE_URL)
   //const data:Data = use(getMainInfo());
 
   const data:Data = {
