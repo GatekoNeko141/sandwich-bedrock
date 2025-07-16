@@ -5,7 +5,7 @@ interface Data {
   subtitle: string;
   description: string;
   social: Social;
-  skills: Skill[];
+  skills: Tech[];
 };
 
 interface Social {
@@ -13,7 +13,7 @@ interface Social {
   linkedin: string;
 };
 
-interface Skill {
+interface Tech {
   name: string;
   icon: string;
   url: string;
@@ -25,5 +25,5 @@ interface Proyect {
   image: string;
   urlGithub: string;
   urlDemo: string;
-  gallery: string[];
+  technologiesUsed: Tech[];
 }
