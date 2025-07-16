@@ -6,7 +6,9 @@ import st from './MainInfo.module.scss';
 
 const MainInfo = () => {
   console.log("===ENV===", process.env.NEXT_PUBLIC_API_BASE_URL)
-  //const data:Data = use(getMainInfo());
+  
+  const temp:Data = use(getMainInfo());
+  console.log("getMainInfo()", temp)
 
   const data:Data = {
     image: 'https://picsum.photos/1000/1000',
