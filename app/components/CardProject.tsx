@@ -6,52 +6,116 @@ import Link from 'next/link';
 import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import { useEffect, useState } from 'react';
+import { getProjects } from '../services/portfolioService';
+import { Skeleton, Typography } from '@mui/material';
 
-interface Props {
-  data: Proyect;
-}
+const CardsProject = () => {
+  const [proyects, setProyects] = useState<Proyect[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
-const CardProject = ({ data }: Props) => {
+  useEffect(() => {
+    getListProjects();
+  }, []);
+
+  const getListProjects = async () => {
+    const response = await getProjects();
+    setProyects(response);
+    setLoading(false);
+  }
+
   const CardProjectHTML = (<>
-    <div className={st.card}>
-      <Image
-        className={st.cardImage}
-        src={data.image}
-        alt={data.title}
-        width={1000}
-        height={1000}
-      />
+    <div className="w-100">
+      <div className="container">
+        <div className={st.cardContainer}>
+          {
+            loading ? (
+              [1, 2, 3].map((item) => (
+                <div key={item} className={st.card}>
+                  <Skeleton variant="rectangular" height={150} />
 
-      <div className={st.cardContent}>
-        <h4 className="text-center">{data.title}</h4>
-        <p className="text-center">{data.description}</p>
+                  <div className={st.cardContent}>
+                    <Typography variant="h4"><Skeleton/></Typography>
+                    <Typography component="p"><Skeleton/></Typography>
 
-        <div className="d-flex justify-content-center gap-2">
-          <Button
-            component={Link}
-            startIcon={<GitHubIcon />}
-            variant="outlined"
-            size="small"
-            color="primary"
-            href={data.urlGithub}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ver Repo
-          </Button>
+                    <div className="d-flex justify-content-center gap-2">
+                      <Skeleton variant="text" width={100} height={40}/>
+                      <Skeleton variant="text" width={100} height={40}/>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : proyects.length === 0 ? (
+              <p>No projects available.</p>
+            ) : null
+          }
 
-          <Button
-            component={Link}
-            startIcon={<RemoveRedEyeIcon />}
-            variant="outlined"
-            size="small"
-            color="primary"
-            href={data.urlDemo}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Ver Demo
-          </Button>
+          {
+            proyects.map((proyecto, index) => (
+              <div key={index} className={st.card}>
+                <Image
+                  className={st.cardImage}
+                  src={proyecto.image}
+                  alt={proyecto.title}
+                  width={1000}
+                  height={1000}
+                />
+
+                <div className={st.cardContent}>
+                  <h4 className="text-center">{proyecto.title}</h4>
+                  <p className="text-center m-0">{proyecto.description}</p>
+
+                  <div className="d-flex flex-wrap justify-content-center">
+                    {proyecto?.technologiesUsed.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="d-flex flex-column align-items-center m-1"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <Image
+                          src={item.icon}
+                          alt={item.name}
+                          width={30}
+                          height={30}
+                        />
+                      </a>
+                    ))}
+                  </div>
+
+                  <div className="d-flex justify-content-center gap-2 mt-2">
+                    <Button
+                      component={Link}
+                      startIcon={<GitHubIcon />}
+                      variant="outlined"
+                      size="small"
+                      color="primary"
+                      href={proyecto.urlGithub}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Ver Repo
+                    </Button>
+
+                    <Button
+                      component={Link}
+                      startIcon={<RemoveRedEyeIcon />}
+                      variant="outlined"
+                      size="small"
+                      color="primary"
+                      href={proyecto.urlDemo}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      Ver Demo
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>
@@ -60,4 +124,4 @@ const CardProject = ({ data }: Props) => {
   return CardProjectHTML;
 }
 
-export default CardProject;
+export default CardsProject;
