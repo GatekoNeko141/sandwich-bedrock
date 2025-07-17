@@ -1,36 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sandwich Bedrock
 
-## Getting Started
+Sandwich Bedrock es un proyecto desarrollado en **Next.js** que sirve como base para aplicaciones web modernas, integrando tecnologías populares para facilitar el desarrollo ágil y escalable.
 
-First, run the development server:
+## Autor
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Gateko**  
+  [gkko.vercel.app](https://gkko.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologías principales
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Tecnología   | Versión      | Enlace                                      |
+|--------------|--------------|----------------------------------------------|
+| Next.js      | 15.x         | [nextjs.org](https://nextjs.org/)           |
+| React        | 19           | [react.dev](https://react.dev/)             |
+| Axios        | 1.x          | [axios-http.com](https://axios-http.com/)    |
+| Material UI  | 7.x          | [mui.com](https://mui.com/)                 |
+| Bootstrap    | 5.x          | [getbootstrap.com](https://getbootstrap.com/)|
