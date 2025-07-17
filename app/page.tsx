@@ -17,7 +17,7 @@ const Home = () => {
         <CardsProject />
 
         <footer className={`container position-relative d-flex flex-column flex-lg-row align-items-center justify-content-lg-between py-5`}>
-          <p>© {new Date().getFullYear()} <a href="https://github.com/GatekoNeko141/sandwich-bedrock" target="_blank">Sandwich Bedrock</a>. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} <a href="https://github.com/GatekoNeko141/sandwich-bedrock" className="text-decoration-underline" target="_blank">Sandwich Bedrock</a>. Todos los derechos reservados.</p>
           <p>
             Desarrollado con ❤️ por John Rodríguez Arteaga
           </p>
