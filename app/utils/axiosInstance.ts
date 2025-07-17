@@ -7,4 +7,11 @@ const http = axios.create({
   },
 });
 
-export default http;
+const vercelblob = axios.create({
+  baseURL: `https://${process.env.VERCELBLOB_BASE_KEY}.public.blob.vercel-storage.com`,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+export { http, vercelblob };

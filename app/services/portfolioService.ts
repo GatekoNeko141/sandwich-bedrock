@@ -1,4 +1,4 @@
-import http from '../utils/axiosInstance'
+import { http } from '../utils/axiosInstance'
 
 export const getMainInfo = async () => {
   try {
