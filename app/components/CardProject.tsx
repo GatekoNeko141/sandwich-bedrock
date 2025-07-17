@@ -32,11 +32,17 @@ const CardsProject = () => {
             loading ? (
               [1, 2, 3].map((item) => (
                 <div key={item} className={st.card}>
-                  <Skeleton variant="rectangular" height={150} />
+                  <Skeleton variant="rectangular" height={250} />
 
                   <div className={st.cardContent}>
                     <Typography variant="h4"><Skeleton/></Typography>
                     <Typography component="p"><Skeleton/></Typography>
+
+                    <div className="d-flex flex-wrap justify-content-center pt-1 gap-2">
+                      <Skeleton variant="circular" height={30} width={30} />
+                      <Skeleton variant="circular" height={30} width={30} />
+                      <Skeleton variant="circular" height={30} width={30} />
+                    </div>
 
                     <div className="d-flex justify-content-center gap-2">
                       <Skeleton variant="text" width={100} height={40}/>
