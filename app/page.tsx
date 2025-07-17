@@ -15,6 +15,13 @@ const Home = () => {
       <div className={"position-relative"}>
         <MainInfo />
         <CardsProject />
+
+        <footer className={`container position-relative d-flex flex-column flex-lg-row align-items-center justify-content-lg-between py-5`}>
+          <p>© {new Date().getFullYear()} Gkko. Todos los derechos reservados.</p>
+          <p>
+            Desarrollado con ❤️ por John Rodríguez Arteaga
+          </p>
+        </footer>
       </div>
     </div>
   );
