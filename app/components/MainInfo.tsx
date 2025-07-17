@@ -1,4 +1,5 @@
 import { use } from "react";
+import { Tooltip } from "@mui/material";
 import { getMainInfo } from "../services/portfolioService";
 
 import Image from "next/image";
@@ -58,21 +59,22 @@ const MainInfo = () => {
 
         <div className="d-flex flex-wrap justify-content-center mt-3">
           {data?.skills.map((skill, index) => (
-            <a
-              key={index}
-              href={skill.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="d-flex flex-column align-items-center m-2"
-              style={{ textDecoration: "none" }}
-            >
-              <Image
-                src={skill.icon}
-                alt={skill.name}
-                width={50}
-                height={50}
-              />
-            </a>
+            <Tooltip title={skill.name} key={index}>
+              <a
+                href={skill.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="d-flex flex-column align-items-center m-2"
+                style={{ textDecoration: "none" }}
+              >
+                <Image
+                  src={skill.icon}
+                  alt={skill.name}
+                  width={50}
+                  height={50}
+                />
+              </a>
+            </Tooltip>
           ))}
         </div>
       </div>
