@@ -71,7 +71,7 @@ const CardsProject = () => {
 
                 <div className={st.cardContent}>
                   <h4 className="text-center">{proyecto.title}</h4>
-                  <p className="text-center m-0">{proyecto.description}</p>
+                  <p className={`${st.description} text-center m-0`}>{proyecto.description}</p>
 
                   <div className="d-flex flex-wrap justify-content-center">
                     {proyecto?.technologiesUsed.map((item, index) => (
@@ -94,31 +94,39 @@ const CardsProject = () => {
                   </div>
 
                   <div className="d-flex justify-content-center gap-2 mt-2">
-                    <Button
-                      component={Link}
-                      startIcon={<GitHubIcon />}
-                      variant="outlined"
-                      size="small"
-                      color="primary"
-                      href={proyecto.urlGithub}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Ver Repo
-                    </Button>
+                    {
+                      proyecto.urlGithub && proyecto.urlGithub !== "" ? (
+                        <Button
+                          component={Link}
+                          startIcon={<GitHubIcon />}
+                          variant="outlined"
+                          size="small"
+                          color="primary"
+                          href={proyecto.urlGithub}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Ver Repo
+                        </Button>
+                      ) : null
+                    }
 
-                    <Button
-                      component={Link}
-                      startIcon={<RemoveRedEyeIcon />}
-                      variant="outlined"
-                      size="small"
-                      color="primary"
-                      href={proyecto.urlDemo}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      Ver Demo
-                    </Button>
+                    {
+                      proyecto.urlDemo && proyecto.urlDemo !== "" ? (
+                        <Button
+                          component={Link}
+                          startIcon={<RemoveRedEyeIcon />}
+                          variant="outlined"
+                          size="small"
+                          color="primary"
+                          href={proyecto.urlDemo}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          Ver Demo
+                        </Button>
+                      ) : null
+                    }
                   </div>
                 </div>
               </div>

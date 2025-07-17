@@ -13,6 +13,14 @@
     padding: 16px;
     background-color: color-mix(in srgb, var(--background) 40%, transparent);
     backdrop-filter: blur(3px);
+    .description{
+      height: 96px;
+      display: -webkit-box;
+      line-clamp: 4;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 }
 
