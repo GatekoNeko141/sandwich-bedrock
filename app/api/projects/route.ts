@@ -3,35 +3,35 @@ import { NextResponse } from 'next/server';
 export async function GET() {
   const projects: Proyect[] = [
     {
-      title: "Proyecto 1",
-      description: "Descripción del proyecto 1.",
-      image: "https://picsum.photos/1000/1000",
+      title: "Landing Nuvix",
+      description: "Página web dedicada a la gestión de casilleros virtuales y servicios logísticos, permitiendo a los usuarios recibir, almacenar y enviar paquetes de manera eficiente y segura.",
+      image: "https://fyk2pgosecdw9j7w.public.blob.vercel-storage.com/images/Screenshot_1.webp",
       urlGithub: "",
-      urlDemo: "",
+      urlDemo: "https://www.nuvix.co",
       technologiesUsed: [
         {
-          name: "TypeScript",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-          url: "https://www.typescriptlang.org/",
+          name: "Vue.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+          url: "https://vuejs.org/",
         },
         {
-          name: "React",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-          url: "https://react.dev/",
+          name: "Nuxt.js",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
+          url: "https://nuxt.com/",
         },
         {
-          name: "Next.js",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-          url: "https://nextjs.org/",
+          name: "GraphQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+          url: "https://graphql.org/",
         },
       ],
     },
     {
-      title: "Proyecto 2",
-      description: "Descripción del proyecto 2.",
-      image: "https://picsum.photos/1000/1000",
+      title: "Victoriana",
+      description: "Página de comercio dedicada a la venta de artículos para el hogar y decoración, ofreciendo una amplia gama de productos para embellecer y equipar espacios.",
+      image: "https://fyk2pgosecdw9j7w.public.blob.vercel-storage.com/images/Screenshot_2.webp",
       urlGithub: "",
-      urlDemo: "",
+      urlDemo: "https://victoriana.adquiria.com.uy",
       technologiesUsed: [
         {
           name: "Angular",
@@ -39,28 +39,14 @@ export async function GET() {
           url: "https://angular.io/",
         },
         {
-          name: "Vue.js",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-          url: "https://vuejs.org/",
-        },
-      ],
-    },
-    {
-      title: "Proyecto 3",
-      description: "Descripción del proyecto 3.",
-      image: "https://picsum.photos/1000/1000",
-      urlGithub: "",
-      urlDemo: "",
-      technologiesUsed: [
-        {
-          name: "Node.js",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-          url: "https://nodejs.org/",
+          name: "RxJS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rxjs/rxjs-original.svg",
+          url: "https://rxjs.dev/",
         },
         {
-          name: "Express",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-          url: "https://expressjs.com/",
+          name: "Bootstrap",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+          url: "https://getbootstrap.com/",
         },
       ],
     },
