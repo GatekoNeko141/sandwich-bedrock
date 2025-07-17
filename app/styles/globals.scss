@@ -54,4 +54,25 @@ body {
   }
 }
 
+.h-divisor {
+  color: var(--foreground);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before, &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    flex: 1 1 0;
+    background: var(--foreground);
+  }
+  &::before {
+    margin-right: 0.75em;
+  }
+  &::after {
+    margin-left: 0.75em;
+  }
+}
+
 .maq{border: 1px red solid !important;}

@@ -27,6 +27,8 @@ const CardsProject = () => {
   const CardProjectHTML = (<>
     <div className="w-100">
       <div className="container">
+        <h3 className="h-divisor text-center mb-5">Proyectos</h3>
+
         <div className={st.cardContainer}>
           {
             loading ? (
